@@ -5,8 +5,9 @@ const path = require(`path`);
 let bot = NIL.bots.getBot(NIL._vanilla.cfg.self_id);
 
 const config = JSON.parse(NIL.IO.readFrom(path.join(__dirname, `config.json`)));
-const owner_id = config.owner_id;
-const group_id = config.group_id;
+let owner_id = config.owner_id;
+let group_id = config.group_id;
+let start = config.start;
 
 function getText(e) {
     var rt = '';
@@ -27,10 +28,12 @@ class MagicAI extends NIL.ModuleBase{
         bot.on(`message.private.friend`, (e) => {
             let text = getText(e);
             let pt = text.split(` `);
-            if(e.from_id == owner_id){
-                bot.sendGroupMsg(group_id, e.message);
+            if(start == true){
+                if(e.from_id == owner_id){
+                    bot.sendGroupMsg(group_id, e.message);
+                }
             }
-        })
+        });
     }
 }
 
