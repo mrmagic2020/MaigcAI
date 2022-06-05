@@ -1,0 +1,19 @@
+{
+  "name": "magic-ai",
+  "version": "1.0.0",
+  "description": "Artificial Intelligence!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrmagic2020/MaigcAI.git"
+  },
+  "author": "Mr. Magic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrmagic2020/MaigcAI/issues"
+  },
+  "homepage": "https://github.com/mrmagic2020/MaigcAI#readme"
+}
